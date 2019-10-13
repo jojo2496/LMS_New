@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="LMS.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin MasterPage</title>
+    <style type="text/css">
+        .style1{
+            width:100%;
+            border:1px solid #00ff00;
+        }
+        .style2{
+            background-color: #99ff66;
+            height:80px;
+        }
+        .style3{
+          color:#ff00ff;
+          font-size:x-large;
+          text-transform:uppercase;
+        }
+        .style4{
+            width:100px;
+            border:1px solid #FFFF00;
+
+        }
+        .style5{
+
+        }
+        .auto-style1 {
+            background-color:#99ff66;
+            height: 109px;
+            text-align: left;
+        }
+        .auto-style2 {
+            width: 100%;
+            margin-top: 3px;
+        }
+        .auto-style3 {
+            text-align: center;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+            <table  class="style1">
+                <tr>
+                    <td class="auto-style1">
+                        <div class="auto-style3">
+                        <span class="style3">&nbsp; Welcome to Leave Management System &nbsp;</span>
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Label ID="Label2" runat="server" BackColor="#CCFFFF" BorderStyle="None" Text="Total Registered Employees: "></asp:Label>
+                            <strong>
+                            <asp:Label ID="Label3" runat="server" BackColor="#CCFFFF" BorderColor="#66FFFF" BorderStyle="Groove"></asp:Label>
+                            </strong>
+                        <br />
+                        </div>
+                        <p style="text-align:right; color:black">
+                        <asp:Label ID="Label1" runat="server"  ></asp:Label>
+                            <br />
+                        </p>
+                    </td>
+                   
+                </tr>
+                 
+
+
+            </table>
+           
+            <table class="auto-style2">
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/admin_home.aspx">Home</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/EmpManagement.aspx">Employee Management</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/LeaveRequest.aspx">Leave Requests</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Admin/leave_category.aspx">Manage Leave Category</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Login.aspx">Logout</asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
+&nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+           &nbsp; <p class="style5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+    </form>
+</body>
+</html>
